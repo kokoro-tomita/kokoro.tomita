@@ -206,7 +206,7 @@
             border-top: 1px solid var(--line-color);
         }
 
-        /* 📱 スマートフォン表示向けのレスポンシブ最適化 (画面幅が600px以下) */
+/* 📱 スマートフォン表示向けのレスポンシブ最適化 (画面幅が600px以下) */
         @media (max-width: 600px) {
             .container {
                 padding: 0.8rem 0.8rem 2rem; /* 左右の余白を狭めて画面幅を有効活用 */
@@ -239,9 +239,19 @@
                 margin-bottom: 3rem; /* セクション間のスクロール量を軽減 */
             }
 
-            .bio-text {
+            /* 💡 Bio、論文・プロジェクトの説明、CVの説明を一括で0.8remに最適化 */
+            .bio-text,
+            .project-card,
+            .project-card p,
+            .cv-desc {
                 text-align: left; /* 英文の単語間に不自然な空白ができるのを防ぐため左寄せに */
                 font-size: 0.8rem;
+                line-height: 1.7; /* 小さい文字でも読みやすいように行間を微調整 */
+            }
+
+            /* 論文タイトルのサイズもスマホ向けに少しだけ調整（お好みで） */
+            .project-title {
+                font-size: 1rem;
             }
 
             .cv-item {
@@ -258,7 +268,7 @@
     </style>
 </head>
 <body>
-
+    
 <div class="container">
 
     <header>
