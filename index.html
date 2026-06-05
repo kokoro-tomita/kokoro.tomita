@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="LkUgVMC5GTaQfRrzGktETDN_wN2gyGvGTthYIgp6_-A" />
+    <title>Kokoro Tomita | Researcher</title>
+    <style>
+        :root {
+            --bg-color: #FAFAF8;
+            --text-color: #333333;
+            --accent-color: #C17F74;
+            --secondary-color: #8DA399;
+            --line-color: #E0E0E0;
+        }
+        
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 0.04em;
+        }
+
+        h1, h2, h3 {
+            font-family: "Garamond", "Times New Roman", "YuMincho", serif;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+            border-bottom-color: transparent;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 6rem 0 4rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--accent-color);
+            padding: 4px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 6rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            border-bottom: none;
+            color: #888;
+            padding: 5px 0;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 6rem;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--line-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .category-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-color);
+            border-left: 2px solid var(--accent-color);
+            padding-left: 0.75rem;
+            margin: 3.5rem 0 1.5rem;
+            font-family: "Helvetica Neue", sans-serif;
+        }
+
+        .bio-text {
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--line-color);
+        }
+
+        .project-card:last-child {
+            border-bottom: none;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+            border-bottom: none;
+        }
+
+        .project-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1rem;
+            display: block;
+            font-style: italic;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 999px;
+            border: 1px solid var(--line-color);
+            margin-right: 0.3rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            color: #777;
+        }
+        
+        .cv-item {
+            display: flex;
+            margin-bottom: 2.5rem;
+        }
+
+        .cv-year {
+            min-width: 140px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .cv-detail {
+            flex: 1;
+        }
+
+        .cv-role {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .cv-org {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+        }
+
+        .cv-desc {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+            padding: 4rem 0;
+            border-top: 1px solid var(--line-color);
+        }
+
+        /* 📱 スマートフォン表示向けのレスポンシブ最適化 (画面幅が600px以下) */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem 1rem 3rem; /* 左右の余白を狭めて画面幅を有効活用 */
+            }
+
+            header {
+                padding: 4rem 0 2.5rem; /* ヘッダーの余白をコンパクトに */
+            }
+
+            header h1 {
+                font-size: 2rem; /* スマホ画面に合わせて名前のサイズを最適化 */
+            }
+
+            nav {
+                margin-bottom: 3.5rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* メニューを2列の押しやすいボタン形式に */
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0;
+                padding: 10px; /* 親指でタップしやすい広めの領域を確保 */
+                background-color: rgba(0, 0, 0, 0.02); /* ボタンの境界がわかりやすい薄い背景 */
+                border-radius: 4px;
+                font-size: 0.85rem;
+            }
+
+            section {
+                margin-bottom: 4rem; /* セクション間のスクロール量を軽減 */
+            }
+
+            .bio-text {
+                text-align: left; /* 英文の単語間に不自然な空白ができるのを防ぐため左寄せに */
+                font-size: 1rem;
+            }
+
+            .cv-item {
+                flex-direction: column; /* 年号と詳細を縦並びに変更 */
+                margin-bottom: 2rem;
+            }
+
+            .cv-year {
+                margin-bottom: 0.3rem;
+                font-weight: bold;
+                color: var(--accent-color); /* タイムラインが追いやすいよう年号を強調 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <img src="profile.jpeg" alt="Kokoro Tomita" class="profile-img">
+        <h1>Kokoro Tomita</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <div class="section-title">About</div>
+        <p class="bio-text">
+            Kokoro Tomita (冨田こころ) is an interdisciplinary researcher from Japan based in Taiwan, working at the intersection of trauma narrative, queer feminist theory, new materialism, and narrative ethics.
+        </p>
+        <p class="bio-text">
+            B.A. in International Liberal Studies (SILS) at Waseda University; M.A. in Literary Studies (DFLL) at National Taiwan University. She is currently preparing for doctoral studies beginning this fall. 
+            She welcomes inquiries about her research, potential collaborations, or speaking opportunities. Please feel free to reach out via email at <a href="mailto:r11122017@ntu.edu.tw">r11122017@ntu.edu.tw</a> (in English / Japanese / Chinese).
+        </p>
+    </section>
+
+    <section id="research">
+        <div class="section-title">Selected Research & Public Scholarship</div>
+
+        <div class="category-label">Publications</div>
+        <div class="project-card">
+            <a href="https://link.springer.com/article/10.1007/s00146-026-02851-y" target="_blank" class="project-title">
+                Compulsory Autonomy in AI: Unmasking Hidden Labor Through Queer Feminist Theory
+            </a>
+            <span class="project-meta">AI & Society, Springer Nature (2026) | <a href="https://link.springer.com/article/10.1007/s00146-026-02851-y" target="_blank">DOI: https://doi.org/10.1007/s00146-026-02851-y</a></span>
+            <p>
+                Drawing on Bernard Stiegler and Judith Butler’s theory, this article theorizes “compulsory autonomy” as a discursive regime that sustains the illusion of autonomous AI by obscuring the human labor, infrastructures, and maintenance practices—such as content moderation, RLHF, and data work—that make AI systems appear self-sufficient.
+            </p>
+        </div>
+
+        <div class="category-label">Under Review</div>
+        <div class="project-card">
+            <span class="project-title">Beyond the Female Gaze: Intra-action and Queer Optics in <i>Portrait of a Lady on Fire</i></span>
+            <span class="project-meta">Under review</span>
+            <p>
+                This article offers a Baradian reading of Céline Sciamma’s <i>Portrait of a Lady on Fire</i>, arguing that the film moves beyond the “female gaze” by showing how looking is materially arranged. It theorizes this arrangement as an intra-active queer optics, in which painter, model, image, and spectator are not fixed positions but emerge through the apparatuses that make queer desire visible across time.
+
+            </p>
+        </div>
+
+        <div class="category-label">Thesis</div>
+        <div class="project-card">
+            <span class="tag">Narrative Theory</span><span class="tag">Trauma Studies</span><span class="tag">New Materialism</span>
+            <br>
+            <span class="project-title">Resisting Compulsory Articulation: Strategic Opacity and Narrative Assemblage in Rachel Cusk’s <i>Outline</i></span>
+            <span class="project-meta">MA Thesis | National Taiwan University</span>
+            <p>
+                This thesis argues that Cusk’s <i>Outline</i> models an after-trauma narrative form that resists what Tomita terms “compulsory articulation”—the cultural logic equating subjecthood with linear, timely, and coherent self-narration. Drawing on Jane Bennett’s vital materialism and narratology, it theorizes a “dividual” narrator whose agency emerges through “narrative assemblage”: a patterned arrangement of borrowed voices, material actants, and strategic opacity.
+            </p>
+        </div>
+
+         <div class="category-label">Public Scholarship</div>
+        <div class="project-card">
+          <span class="project-title"><a href="https://www.waseda.jp/inst/gscenter/news/2022/01/25/5493/" target="_blank"> 絶対恋愛になる世界vs絶対恋愛にならない私ーAロマンティックAセクシュアルー (Beyond Compulsory Romance and Sexuality: Aro/Ace Lives and Everyday Norms)</a></span>
+            <span class="project-meta">Waseda University, Gender and Sexuality Center (2021)</span>
+            <p>
+                Designed and facilitated a large-scale online public event on aromantic and asexual experiences, drawing approximately 450 participants. The event began with an individual reflection workshop that asked participants to unpack seemingly familiar words such as “liking” and “dating,” focusing not on fixed identity categories but on the differing needs, intensities, and nuances through which each person experiences romance, intimacy, and relationships. From this shared standpoint, the event examined why certain differences become marginalized or problematized under amatonormative and heteronormative social norms. The program combined individual reflection, a researcher-led introduction, and a panel discussion with community speakers on self-identification, interpersonal difficulties and coping strategies, and the norms that produce those difficulties. 
+            </p>
+        </div>
+        
+    </section>
+
+    <section id="experience">
+        <div class="section-title">Academic, Editorial & Community Experience</div>
+        <div class="cv-item">
+            <div class="cv-year">2026 – Present</div>
+            <div class="cv-detail">
+                <span class="cv-role">Editorial Board Member / Editor</span>
+                <span class="cv-org"> <a href="https://cjdproject.web.nycu.edu.tw/" target="_blank">CJD: Conflict, Justice, Decolonization: Asia in Transition in the 21st Century</a></span>
+            </div>
+        </div>
+        
+        <div class="cv-item">
+            <div class="cv-year">2026</div>
+            <div class="cv-detail">
+                <span class="cv-role">Peer Reviewer</span>
+                <span class="cv-org">AI & Society (Springer Nature)</span>
+            </div>
+        </div>
+
+        <div class="cv-item">
+            <div class="cv-year">2023 – 2025</div>
+            <div class="cv-detail">
+                <span class="cv-role">Research Assistant | “Enlightenment, Resistance, and the Path to Self-Awareness: East Asian Shakespeare and Colonial Modernity”</span>
+                <span class="cv-org">National Taiwan University, Dept. of Foreign Languages and Literatures</span>
+            </div>
+        </div>
+
+        <div class="cv-item">
+            <div class="cv-year">2022 – 2023</div>
+            <div class="cv-detail">
+                <span class="cv-role">Teaching Assistant | European Literature 1350–1800</span>
+                <span class="cv-org">National Taiwan University, Dept. of Foreign Languages and Literatures</span>
+            </div>
+        </div>
+
+        <div class="cv-item">
+            <div class="cv-year">2022 – 2026</div>
+            <div class="cv-detail">
+                <span class="cv-role">Multilingual DEI Communications & Youth Work</span>
+                <span class="cv-org"><a href="https://pridehouse.jp/" target="_blank">Pride House Tokyo</a></span>
+                <div class="cv-desc">Developed multilingual community materials, ace aro allyship training; and facilitated in-person & online safer space for LGBTQ+ youth and children.</div>
+            </div>
+        </div>
+        
+<div class="cv-item">
+            <div class="cv-year">2019 – 2022</div>
+            <div class="cv-detail">
+                <span class="cv-role">Student Staff</span>
+                <span class="cv-org"><a href="https://www.waseda.jp/inst/gscenter/" target="_blank">Waseda University Gender &amp; Sexuality Center</a></span>
+                <div class="cv-desc">
+                    Organized and facilitated a public-facing event and sustained a safer space for LGBTQ+ students and those who are interested in gender and sexuality issues on campus.
+                </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-title">Contact</div>
+        <p style="text-align: center;">
+            <a href="mailto:r11122017@ntu.edu.tw">Email</a> &nbsp;/&nbsp; 
+            <a href="https://philpeople.org/profiles/kokoro-tomita" target="_blank">PhilPeople</a> 
+        </p>
+    </section>
+
+    <footer>
+        &copy; 2026 Kokoro Tomita.
+    </footer>
+
+</div>
+
+</body>
+</html>
